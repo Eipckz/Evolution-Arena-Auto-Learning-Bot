@@ -18,11 +18,11 @@ The GUI shows the playable tableau, live ranking for all 16 agents, generation n
 
 The media below was captured from the hosted application while it was running. It shows the ready state, live agents, and a generation rollover with a recorded best-ever score.
 
-![Evolution Arena live demo](media/evolution-arena-demo.gif)
+![Suit Lines live demo](media/suit-lines-demo.gif)
 
 | Ready state | Running state | Generation 1 |
 |---|---|---|
-| ![Ready state](media/evolution-arena-ready.png) | ![Running state](media/evolution-arena-running.png) | ![Generation 1](media/evolution-arena-generation-1.png) |
+| ![Ready state](media/suit-lines-ready.png) | ![Running state](media/suit-lines-running.png) | ![Generation 1](media/suit-lines-generation-1.png) |
 
 ## What it does
 
