@@ -1,6 +1,6 @@
-# Evolution Arena — Auto-Learning Multi-Game Bot
+# Suit Lines — Evolutionary Card Game
 
-Evolution Arena is a dependency-free browser demo of population-based learning. Sixteen agents play independent arenas at the same time, receive fitness from target collection and hazard avoidance, and produce a new generation through elite retention and mutation.
+Suit Lines is a dependency-free browser demo of population-based learning inspired by Spider Solitaire. The four-suit single-deck variant asks players to build descending same-suit lines from King to Ace. Sixteen agents practice the same deal at the same time, receive fitness from completed lines and useful tableau structure, and produce a new generation through elite retention and mutation.
 
 ## Live demo
 
@@ -12,7 +12,7 @@ python -m http.server 8765 --directory .
 
 Then visit <http://127.0.0.1:8765/>.
 
-The GUI shows all 16 arenas, live ranking, generation number, best score, best-ever score, population count, and an event log. The purple trail identifies the current champion.
+The GUI shows the playable tableau, live ranking for all 16 agents, generation number, completed runs, move count, best-ever fitness, and an evolution log.
 
 ## Real run
 
@@ -32,9 +32,16 @@ The media below was captured from the hosted application while it was running. I
 - Remaining agents are mutated copies, creating evolutionary learning across generations.
 - The dashboard shows generation, live scores, best-ever score, trails, and a compact event log.
 
+## Rules
+
+- Build down by rank: a card can be placed on the next higher rank.
+- Only a same-suit descending run can be selected and moved as a group.
+- A complete same-suit King-to-Ace line is removed and counts toward the four-run goal.
+- The included variant uses one deck and eight tableau columns so the goal is exactly four suit lines.
+
 ## Learning behavior and limits
 
-The demo uses a fixed-size neural-style policy vector rather than full NEAT. This keeps the project understandable and runnable from a single HTML file. It is an evolutionary learner, not a proof of general intelligence: performance depends on the chosen fitness function, random seed, episode length, and environment.
+The demo uses a small weighted move-scoring policy rather than full NEAT. Each agent scores legal moves using learned weights for same-suit chains, completed runs, and open columns. This keeps the project understandable and runnable from a single HTML file. It is an evolutionary learner, not a proof of general intelligence: performance depends on the deal, fitness function, random seed, and episode length.
 
 “Improvement” is measured by the best fitness observed in each generation and the persistent best-ever score. Because evolution is stochastic, a particular run can temporarily regress; elite preservation prevents the best brain from being discarded when the next population is created.
 
@@ -53,5 +60,5 @@ The demo uses a fixed-size neural-style policy vector rather than full NEAT. Thi
 
 - JavaScript syntax checked with `node --check`.
 - Browser smoke test confirmed 16 visible agent canvases and `16 / 16` live population.
-- Runtime demo confirmed score ranking updates and generation rollover from 0 to 1 with a best-ever score recorded.
+- Runtime demo confirmed card tableau rendering, 16 ranked agents, score updates, and generation rollover with a best-ever fitness recorded.
 - No package installation or network service is required to run the demo.

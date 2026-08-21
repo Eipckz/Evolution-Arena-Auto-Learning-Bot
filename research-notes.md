@@ -18,6 +18,18 @@ Claims will be added with source titles, URLs, and a note distinguishing synthes
 
 The current browser implementation uses a fixed-size policy vector for simplicity, parallel episodes, explicit fitness, elite retention, and mutation. It does not claim to implement full NEAT: topology mutation, crossover, and speciation remain possible next iterations. These notes are a synthesis of the visible YouTube titles/descriptions and should be independently checked against primary papers before treating them as a formal implementation specification.
 
+## Card-game research pass
+
+The rules and strategy scan identified the intended game family as Spider Solitaire / a Spider-like patience variant. The useful mechanics are descending tableau builds, same-suit runs as the movable unit, valuable empty columns, and automatic removal of complete King-to-Ace same-suit runs. The project intentionally uses a one-deck four-run variant rather than claiming to reproduce every rule of standard two-deck Spider.
+
+YouTube examples reviewed in the signed-in browser workflow include:
+
+- [How to Play Spider Solitaire (1 Suit): Rules, Setup and 5 Winning Habits](https://www.youtube.com/watch?v=aY6KnCnZ8Vc) — PlaySolitaire; useful overview of runs, empty columns, stock timing, and progression from one to four suits.
+- [Spider Solitaire 2 Suits: Rules, Strategy and 5 Habits](https://www.youtube.com/watch?v=E9SGbAON0zI) — PlaySolitaire; useful explanation of why same-suit building matters as suit count increases.
+- [Spider Solitaire F Strategy/Tips](https://www.youtube.com/watch?v=rf_Dqt_jsr0) — The Hidden Levels; strategy framing around revealing and organizing locked cards.
+
+The browser ChatGPT account was not available for a fresh multi-chat submission in this turn because the visible session required a new login. The earlier approved research chats remain part of the project history; this card-game-specific pass is grounded in the visible YouTube results and public rules sources.
+
 ## Multi-chat research pass
 
 Four separate ChatGPT Pro research chats were submitted in the signed-in workspace:
