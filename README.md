@@ -12,7 +12,7 @@ python -m http.server 8765 --directory .
 
 Then visit <http://127.0.0.1:8765/>.
 
-The GUI shows the playable tableau, live ranking for all 16 agents, generation number, completed runs, move count, best-ever fitness, and an evolution log.
+The GUI shows a live replay of the current best agent moving cards on the tableau, live ranking for all 16 agents, generation number, completed runs, move count, elapsed replay time, best-ever fitness, and an evolution log. The replay board is not a prerecorded animation: it is driven by the same legal-move engine used by the agents.
 
 ## Real run
 
@@ -41,7 +41,7 @@ The media below was captured from the hosted application while it was running. I
 
 ## Learning behavior and limits
 
-The demo uses a small weighted move-scoring policy rather than full NEAT. Each agent scores legal moves using learned weights for same-suit chains, completed runs, and open columns. This keeps the project understandable and runnable from a single HTML file. It is an evolutionary learner, not a proof of general intelligence: performance depends on the deal, fitness function, random seed, and episode length.
+The demo uses a small weighted move-scoring policy rather than full NEAT. Each agent scores legal moves using learned weights for same-suit chains, completed runs, and open columns. The live replay reports elapsed time and move count; when all four runs are completed, the log records the completion time. If a deal is not solved during the replay window, the UI intentionally reports partial progress instead of pretending it finished. This keeps the project understandable and runnable from a single HTML file. It is an evolutionary learner, not a proof of general intelligence: performance depends on the deal, fitness function, random seed, and episode length.
 
 “Improvement” is measured by the best fitness observed in each generation and the persistent best-ever score. Because evolution is stochastic, a particular run can temporarily regress; elite preservation prevents the best brain from being discarded when the next population is created.
 
