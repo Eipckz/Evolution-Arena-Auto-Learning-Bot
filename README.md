@@ -14,6 +14,16 @@ Then visit <http://127.0.0.1:8765/>.
 
 The GUI shows all 16 arenas, live ranking, generation number, best score, best-ever score, population count, and an event log. The purple trail identifies the current champion.
 
+## Real run
+
+The media below was captured from the hosted application while it was running. It shows the ready state, live agents, and a generation rollover with a recorded best-ever score.
+
+![Evolution Arena live demo](media/evolution-arena-demo.gif)
+
+| Ready state | Running state | Generation 1 |
+|---|---|---|
+| ![Ready state](media/evolution-arena-ready.png) | ![Running state](media/evolution-arena-running.png) | ![Generation 1](media/evolution-arena-generation-1.png) |
+
 ## What it does
 
 - Runs a population of 16 agents and renders multiple games simultaneously.
