@@ -28,7 +28,7 @@ YouTube examples reviewed in the signed-in browser workflow include:
 - [Spider Solitaire 2 Suits: Rules, Strategy and 5 Habits](https://www.youtube.com/watch?v=E9SGbAON0zI) — PlaySolitaire; useful explanation of why same-suit building matters as suit count increases.
 - [Spider Solitaire F Strategy/Tips](https://www.youtube.com/watch?v=rf_Dqt_jsr0) — The Hidden Levels; strategy framing around revealing and organizing locked cards.
 
-The browser ChatGPT account was not available for a fresh multi-chat submission in this turn because the visible session required a new login. The earlier approved research chats remain part of the project history; this card-game-specific pass is grounded in the visible YouTube results and public rules sources.
+Three card-game-specific ChatGPT Pro research chats were submitted after selecting the visible authorized personal Google account: rules and variant design, evolutionary state/fitness design, and a YouTube-informed educational demo checklist. Their independent focus areas were kept separate so the implementation could compare rules, learning design, and presentation guidance.
 
 ## Multi-chat research pass
 
